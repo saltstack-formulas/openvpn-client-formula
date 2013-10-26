@@ -1,0 +1,2 @@
+openvpn-client:
+  server: vpn.mydomain.tld 1194

@@ -5,6 +5,7 @@
     - template: jinja
     - context:
       id: "{{ grains['id'] }}"
+      server: "{{ pillar['openvpn-client']['server']}}"
 
 /etc/openvpn/ca.crt:
   file.managed:
