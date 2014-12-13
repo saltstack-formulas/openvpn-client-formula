@@ -21,8 +21,7 @@
     - mode: 700
 
 openvpn:
-  pkg:
-    - installed
+  pkg.installed: []
   service.running:
     - enable: True
     - require:
