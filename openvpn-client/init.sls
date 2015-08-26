@@ -18,7 +18,7 @@
 /etc/openvpn/{{ grains['id'] }}.key:
   file.managed:
     - source: salt://openvpn-client/keys/{{ grains['id'] }}.key
-    - mode: 700
+    - mode: 600
 
 openvpn:
   pkg.installed: []
@@ -26,7 +26,7 @@ openvpn:
     - enable: True
     - require:
       - pkg: openvpn
-    - watch: 
+    - watch:
       - file: /etc/openvpn/client.conf
       - file: /etc/openvpn/{{ grains['id'] }}.crt
       - file: /etc/openvpn/{{ grains['id'] }}.key
